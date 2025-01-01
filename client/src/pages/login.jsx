@@ -29,6 +29,12 @@ const Login = () => {
     }
   };
 
+  const handleRegistration = async (type) => {
+    const inputData = type === "signup" ? signupInput : loginInput;
+    console.log(inputData);
+    // Placeholder for additional logic, such as API calls.
+  };
+
   return (
     <div className="flex items-center justify-center w-full">
       <Tabs defaultValue="login" className="w-[400px]">
@@ -82,7 +88,9 @@ const Login = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Create Account</Button>
+              <Button onClick={() => handleRegistration("signup")}>
+                Create Account
+              </Button>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -121,7 +129,7 @@ const Login = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Login</Button>
+              <Button onClick={() => handleRegistration("login")}>Login</Button>
             </CardFooter>
           </Card>
         </TabsContent>
