@@ -1,13 +1,17 @@
 
 import './App.css'
 import { Button } from './components/ui/button'
+import Login from './pages/login'
 
 function App() {
  
 
   return (
-    <Button>LMS project</Button>
-  )
+    <main>
+      <Button>LMS project</Button>
+      <Login />
+    </main>
+  );
 }
 
 export default App
