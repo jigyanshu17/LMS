@@ -8,7 +8,7 @@ dotenv.config({
   path: "./.env",
 });
 
-const app = express(); // Initialize Express app
+const app = express(); // Initialize Express apps
 //default middleware
 app.use(express.json());
 app.use(cookieParser());
