@@ -12,10 +12,12 @@ const app = express(); // Initialize Express app
 //default middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: `http://localhost:${port}`,
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: `http://localhost:5173`,
+    credentials: true,
+  })
+);
 //apis
 app.use("/api/v1/user",userRoute);
 
