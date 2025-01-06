@@ -17,6 +17,7 @@ import {
 } from "@/features/api/authApi";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -45,6 +46,7 @@ const Login = () => {
       isSuccess: loginIsSuccess,
     },
   ] = useLoginUserMutation();
+  const navigate = useNavigate();
 
   const changeInputHandler = (e, type) => {
     const { name, value } = e.target;
@@ -83,7 +85,9 @@ const Login = () => {
         title: "Success",
         description: loginData.message || "Login successful.",
       });
+      navigate("/"); // Navigate to the homepage after successful login
     }
+
     if (loginError) {
       toast({
         title: "Error",
