@@ -22,6 +22,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from './dropdown-menu';
+import { Link } from 'react-router-dom';
 function Navbar() {
     const user = true;
     return (
@@ -52,10 +53,10 @@ function Navbar() {
                                 <DropdownMenuSeparator />
                                 <DropdownMenuGroup>
                                     <DropdownMenuItem>
-                                        My learning
+                                       <Link to="my-learning"> My learning</Link>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
-                                        Edit Profile
+                                        <Link to="profile">Edit Profile</Link>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
                                         Log out
