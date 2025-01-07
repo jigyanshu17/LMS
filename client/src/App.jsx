@@ -4,6 +4,7 @@ import Navbar from "./components/ui/Navbar";
 import Login from "./pages/login";
 import HeroSection from "./pages/student/HeroSection";
 import MainLayout from "./layout/MainLayout";
+import Courses from "./pages/student/Courses";
 
 const appRouter = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const appRouter = createBrowserRouter([
         element: (
           <>
             <HeroSection />
-            {/* <Courses /> */}
+            <Courses />
           </>
         ),
       },
