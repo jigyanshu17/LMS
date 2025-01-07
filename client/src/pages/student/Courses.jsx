@@ -4,7 +4,7 @@ import Course from "./Course.jsx";
 
 const courses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 const Courses = () => {
-  const isLoading = true
+  const isLoading = false;
 
   return (
     <div className="bg-gray-50 dark:bg-[#141414]">
